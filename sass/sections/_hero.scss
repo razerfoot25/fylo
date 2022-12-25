@@ -21,7 +21,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
-    background-color: var(--clr-primary-100);
+    background-color: var(--clr-primary-200);
     z-index: -1;
   }
 
@@ -29,8 +29,7 @@
     &--image {
       align-self: center;
     }
-    &--btn {
-    }
+
     &::before {
       background-image: url("../images/bg-curvy-desktop.svg");
       inset: 0 0 calc(-55rem + 50%) 0;
