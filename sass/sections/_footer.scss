@@ -1,10 +1,11 @@
+@use "../components/media-query" as *;
 .footer {
   position: relative;
-
+  row-gap: var(--size-500);
   &::before {
     content: "";
     position: absolute;
-    inset: -60% 0 0 0;
+    inset: -40% 0 0 0;
     background-color: var(--clr-primary-400);
     z-index: -1;
   }
@@ -14,7 +15,7 @@
 
   &__lower {
     display: grid;
-    grid-template-columns: 1.8fr 0.9fr 0.9fr 0.4fr;
+    grid-template-columns: 2.5fr 0.5fr 0.5fr 0.5fr;
     gap: var(--size-500);
     > * {
       grid-column: 1 / -1;
@@ -23,17 +24,23 @@
     &--info {
       display: flex;
       flex-direction: column;
-      &__other {
-      }
+      gap: var(--size-300);
+
       &__text {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         gap: var(--size-300);
-        padding-top: var(--size-300);
+
         img {
           margin-top: 0.25rem;
         }
+      }
+
+      &__other {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-300);
       }
     }
 
@@ -44,6 +51,15 @@
       li a {
         text-decoration: none;
         color: var(--clr-neutral-100);
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 95% 100% 0 0;
+          background-color: currentColor;
+        }
+        &:hover {
+          font-weight: var(--fw-heading-bold);
+        }
       }
     }
 
@@ -84,6 +100,33 @@
       }
       li:nth-child(3) a {
         mask-image: url("../images/instagram.svg");
+      }
+    }
+  }
+
+  @include mq(medium) {
+    &__lower {
+      align-items: flex-start;
+      gap: var(--size-600);
+      &--info {
+        grid-column: 1 / 2;
+
+        flex-direction: row;
+        gap: var(--size-600);
+      }
+
+      ul {
+        justify-self: end;
+      }
+      &--navigation:nth-child(2) {
+        grid-column: 2 / 3;
+      }
+      &--navigation:nth-child(3) {
+        grid-column: 3 / 4;
+      }
+
+      &--links {
+        grid-column: 4 / 5;
       }
     }
   }

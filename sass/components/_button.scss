@@ -1,13 +1,33 @@
 .btn {
+  position: relative;
   padding: 1rem;
   border-radius: 3rem;
   outline: 0;
   border: 0;
   color: var(--clr-neutral-100);
+  cursor: pointer;
   font-weight: var(--fw-heading-bold);
   background-image: linear-gradient(
     to right,
     var(--clr-accent-100),
+    70%,
     var(--clr-accent-300)
   );
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 50% 0 50%;
+    background-color: var(--clr-neutral-100);
+    opacity: 0.5;
+    border-radius: 5rem;
+    transition: left 250ms ease-in, right 250ms ease-in;
+  }
+
+  &:hover {
+    &::before {
+      right: 0;
+      left: 0;
+    }
+  }
 }

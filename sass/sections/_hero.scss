@@ -1,10 +1,11 @@
 @use "../components/button" as *;
+@use "../components/media-query" as *;
 .hero {
   > div {
     display: flex;
     flex-direction: column;
-    gap: var(--size-300);
     text-align: center;
+    max-width: 47rem;
   }
   &--heading {
     font-weight: var(--fw-heading-bold);
@@ -15,12 +16,24 @@
   &::before {
     content: "";
     position: absolute;
-    inset: 0 0 24rem 0;
+    inset: 0 0 calc(30rem - 15%) 0;
     background-image: url("../images/bg-curvy-mobile.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
     background-color: var(--clr-primary-100);
     z-index: -1;
+  }
+
+  @include mq(medium) {
+    &--image {
+      align-self: center;
+    }
+    &--btn {
+    }
+    &::before {
+      background-image: url("../images/bg-curvy-desktop.svg");
+      inset: 0 0 calc(-55rem + 50%) 0;
+    }
   }
 }

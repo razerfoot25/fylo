@@ -24,22 +24,22 @@
 }
 @include mq(medium) {
   @each $number, $size in $sizes {
-    .p-#{$number} {
+    .p-#{$number}-md {
       padding: $size;
     }
-    .p-block-#{$number} {
+    .p-block-#{$number}-md {
       padding-block: $size;
     }
-    .p-inline-#{$number} {
+    .p-inline-#{$number}-md {
       padding-inline: $size;
     }
-    .m-#{$number} {
+    .m-#{$number}-md {
       margin: $size;
     }
-    .m-block-#{$number} {
+    .m-block-#{$number}-md {
       margin-block: $size;
     }
-    .m-inline-#{$number} {
+    .m-inline-#{$number}-md {
       margin-inline: $size;
     }
   }
@@ -56,7 +56,7 @@
 }
 
 .container {
-  max-width: Min(var(--max-width), 100% - var(--gutter) * 2);
+  max-width: Min(var(--max-container-width), 100% - var(--gutter) * 2);
   margin-inline: auto;
 }
 
