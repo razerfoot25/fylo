@@ -1,0 +1,115 @@
+@use "../components/button" as *;
+.testimonials {
+  row-gap: var(--size-600);
+  margin-top: var(--size-500);
+}
+
+.even__cols {
+  gap: var(--size-500);
+  &--body {
+    h6 {
+      font-weight: var(--fw-heading-bold);
+    }
+    a {
+      color: var(--clr-accent-300);
+      text-decoration: none;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 130% 0 -0.5rem 0;
+        background-color: currentColor;
+      }
+      span {
+        margin-left: 0.5rem;
+      }
+      svg {
+        position: relative;
+        top: 0.15rem;
+      }
+
+      &:hover {
+        color: var(--clr-neutral-100);
+      }
+    }
+  }
+}
+
+.three__cols {
+  position: relative;
+  gap: var(--size-400);
+
+  &--card {
+    background-color: var(--clr-primary-100);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-300);
+  }
+
+  &--msg {
+    line-height: 1.7;
+  }
+
+  &--owner {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: var(--size-300);
+    img {
+      max-height: 3rem;
+      border-radius: 5rem;
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      small:first-child {
+        font-weight: var(--fw-body-bold);
+      }
+      small:last-child {
+        font-weight: var(--fw-body-regular);
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &::before {
+    content: url("../images/bg-quotes.png");
+    position: absolute;
+    inset: -2.25rem auto auto 1rem;
+    transform: scale(0.6);
+    z-index: -1;
+  }
+}
+
+.float__box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-400);
+  position: relative;
+  background-color: var(--clr-primary-200);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem -0.25rem var(--clr-primary-400);
+  text-align: center;
+
+  strong {
+    font-weight: var(--fw-heading-bold);
+  }
+
+  &--btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-400);
+
+    input {
+      border: 0;
+      outline: 0;
+      border-radius: 2rem;
+    }
+    button {
+      @extend .btn;
+    }
+  }
+}

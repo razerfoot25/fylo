@@ -1,0 +1,26 @@
+$font-size: (
+  small: (
+    h1: Clamp(1.6rem, 5vw, 2rem),
+    h2: Clamp(1.25rem, 5vw, 2rem),
+    h3: Clamp(1.25rem, 5vw, 2rem),
+    h4: Clamp(1.25rem, 5vw, 2rem),
+    h5: Clamp(1.25rem, 5vw, 2rem),
+    h6: Clamp(1.25rem, 5vw, 2rem),
+    p: Clamp(0.95rem, 4vw, 2rem),
+    a: Clamp(0.95rem, 2vw, 1.375rem),
+    small: Clamp(0.7rem, 2vw, 1.375rem),
+    strong: Clamp(1.25rem, 5vw, 2rem),
+    button: Clamp(1.125rem, 5vw, 2rem),
+  ),
+);
+
+$font-weight: (
+  heading: (
+    regular: 400,
+    bold: 700,
+  ),
+  body: (
+    regular: 400,
+    bold: 700,
+  ),
+);

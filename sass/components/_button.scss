@@ -1,0 +1,13 @@
+.btn {
+  padding: 1rem;
+  border-radius: 3rem;
+  outline: 0;
+  border: 0;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-heading-bold);
+  background-image: linear-gradient(
+    to right,
+    var(--clr-accent-100),
+    var(--clr-accent-300)
+  );
+}

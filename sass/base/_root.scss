@@ -1,0 +1,26 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+@use "./size" as *;
+
+:root {
+  --grid-column: 6;
+  --max-width: 90em;
+  --grid-gap: 1rem;
+  --gutter: 1.5rem;
+
+  @each $type, $value in $colors {
+    @each $number, $shade in $value {
+      --clr-#{$type}-#{$number}: #{$shade};
+    }
+  }
+
+  @each $type, $value in $font-weight {
+    @each $weight, $number in $value {
+      --fw-#{$type}-#{$weight}: #{$number};
+    }
+  }
+
+  @each $number, $size in $sizes {
+    --size-#{$number}: #{$size};
+  }
+}

@@ -1,0 +1,26 @@
+@use "../components/button" as *;
+.hero {
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-300);
+    text-align: center;
+  }
+  &--heading {
+    font-weight: var(--fw-heading-bold);
+  }
+  &--btn {
+    @extend .btn;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 24rem 0;
+    background-image: url("../images/bg-curvy-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    background-color: var(--clr-primary-100);
+    z-index: -1;
+  }
+}

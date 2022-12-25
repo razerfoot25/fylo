@@ -1,0 +1,25 @@
+@use "./fonts" as *;
+
+@each $viewpoint, $value in $font-size {
+  @each $tag, $size in $value {
+    #{$tag} {
+      font-size: $size;
+    }
+  }
+}
+
+body {
+  font-size: 0.875rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+a {
+  font-family: "Raleway", sans-serif;
+}
