@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://fylo-jay.netlify.app/)
-- Live Site URL: [Live Site UR](https://fylo-jay.netlify.app/)
+- Solution URL: [Solution](https://fylo-jay.netlify.app/)
+- Live Site URL: [Live Site](https://fylo-jay.netlify.app/)
 
 ### Built with
 
