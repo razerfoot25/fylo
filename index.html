@@ -25,7 +25,7 @@
     <header class="grid-container">
       <div class="primary__header p-block-400 p-block-500-md">
         <a href="#" class="primary__header--logo"
-          ><img src="./images/logo.svg" alt="fylo"
+          ><img src="./images/logo.svg" aria-hidden="true" alt=""
         /></a>
         <nav class="primary__header--navigation">
           <ul role="list">
@@ -42,7 +42,7 @@
         <div class="container spacer">
           <img
             src="./images/illustration-intro.png"
-            alt="design image"
+            aria-hidden="true"
             class="hero--image p-inline-400"
           />
           <h1 class="hero--heading neutral-100">
@@ -53,7 +53,11 @@
             Access them wherever you need, share and collaborate with friends
             family, and co-workers.
           </p>
-          <button class="hero--btn m-inline-400 m-inline-800-md">
+          <button
+            role="button"
+            aria-label="get started"
+            class="hero--btn m-inline-400 m-inline-800-md"
+          >
             Get Started
           </button>
         </div>
@@ -61,7 +65,7 @@
 
       <section class="container p-block-600 p-block-700-md">
         <div class="article grid-col-2">
-          <article class="article__card spacer">
+          <div class="article__card spacer">
             <img
               src="./images/icon-access-anywhere.svg"
               alt="svg1"
@@ -72,8 +76,8 @@
               The ability to use a smartphone, tablet, or computer to access
               your account means your files follow you everywhere.
             </p>
-          </article>
-          <article class="article__card spacer">
+          </div>
+          <div class="article__card spacer">
             <img
               src="./images/icon-security.svg"
               alt="svg 2"
@@ -85,8 +89,8 @@
               couple of the security features we allow to help secure your
               files.
             </p>
-          </article>
-          <article class="article__card spacer">
+          </div>
+          <div class="article__card spacer">
             <img
               src="./images/icon-collaboration.svg"
               alt="svg3"
@@ -97,8 +101,8 @@
               Securely share files and folders with friends, family and
               colleagues for live collaboration. No email attachments required.
             </p>
-          </article>
-          <article class="article__card spacer">
+          </div>
+          <div class="article__card spacer">
             <img
               src="./images/icon-any-file.svg"
               alt="svg4"
@@ -110,7 +114,7 @@
               you covered allowing for all file types to be securely stored and
               shared.
             </p>
-          </article>
+          </div>
         </div>
       </section>
 
@@ -180,46 +184,52 @@
           </div>
         </div>
         <div class="three__cols grid-col-3 p-inline-200">
-          <div class="three__cols--card p-400">
-            <small class="three__cols--msg"
-              >Fylo has improved our team productivity by an order of magnitude.
-              Since making the switch our team has become a well-oiled
-              collaboration machine.</small
-            >
-            <div class="three__cols--owner">
+          <figure class="three__cols--card p-400">
+            <blockquote>
+              <small class="three__cols--msg"
+                >Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.</small
+              >
+            </blockquote>
+            <figcaption class="three__cols--owner">
               <img src="./images/profile-1.jpg" alt="Satish Patel" />
               <div class="three__cols--owner__info">
                 <small>Satish Patel</small><small>Founder & CEO, Huddle</small>
               </div>
-            </div>
-          </div>
-          <div class="three__cols--card p-400">
-            <small class="three__cols--msg"
-              >Fylo has improved our team productivity by an order of magnitude.
-              Since making the switch our team has become a well-oiled
-              collaboration machine.</small
-            >
+            </figcaption>
+          </figure>
+          <figure class="three__cols--card p-400">
+            <blockquote>
+              <small class="three__cols--msg"
+                >Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.</small
+              >
+            </blockquote>
             <div class="three__cols--owner">
               <img src="./images/profile-2.jpg" alt="Bruce McKenzie" />
-              <div class="three__cols--owner__info">
+              <figcaption class="three__cols--owner__info">
                 <small>Bruce McKenzie</small
                 ><small>Founder & CEO, Huddle</small>
-              </div>
+              </figcaption>
             </div>
-          </div>
-          <div class="three__cols--card p-400">
-            <small class="three__cols--msg"
-              >Fylo has improved our team productivity by an order of magnitude.
-              Since making the switch our team has become a well-oiled
-              collaboration machine.</small
-            >
-            <div class="three__cols--owner">
+          </figure>
+          <figure class="three__cols--card p-400">
+            <blockquote>
+              <small class="three__cols--msg"
+                >Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.</small
+              >
+            </blockquote>
+            <figcaption class="three__cols--owner">
               <img src="./images/profile-3.jpg" alt="Iva Boyd" />
               <div class="three__cols--owner__info">
                 <small>Iva Boyd</small><small>Founder & CEO, Huddle </small>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         </div>
         <div class="float__box p-400 p-500-md p-inline-600-md m-block-500">
           <strong>Get early access today</strong>
@@ -228,54 +238,60 @@
             extremely generous. If you have any questions, our support team
             would be happy to help you.
           </p>
-          <div class="float__box--btn-group">
+          <form class="float__box--btn-group">
+            <label for="email" id="label1" class="sr-only">email</label>
             <input
               type="email"
+              name="email"
+              id="email"
               class="p-block-300 p-inline-400"
               placeholder="email@example.com"
+              aria-labelledby="label1"
             /><span>Please enter a valid email address</span>
             <button>Get Started For Free</button>
-          </div>
+          </form>
         </div>
       </section>
 
       <footer>
         <div class="footer grid-container p-block-400">
           <a href="#" class="footer__logo"
-            ><img src="./images/logo.svg" alt="logo"
+            ><img src="./images/logo.svg" aria-hidden="true" alt=""
           /></a>
           <div class="footer__lower">
             <div class="footer__lower--info">
-              <div class="footer__lower--info__text">
-                <img src="./images/icon-location.svg" alt="location" /> Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua
-              </div>
+              <address class="footer__lower--info__text">
+                <img src="./images/icon-location.svg" alt="location" /><a
+                  href="#"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </a>
+              </address>
 
-              <div class="footer__lower--info__other">
-                <div class="footer__lower--info__text">
-                  <img
-                    src="./images/icon-phone.svg"
-                    alt="phone"
-                  />+1-543-123-4567
+              <address class="footer__lower--info__other">
+                <div href="#" class="footer__lower--info__text">
+                  <img src="./images/icon-phone.svg" alt="phone" /><a href="#"
+                    >+1-543-123-4567</a
+                  >
                 </div>
                 <div class="footer__lower--info__text">
                   <img src="./images/icon-email.svg" alt="email" />
-                  example@fylo.com
+                  <a href="#">example@fylo.com</a>
                 </div>
-              </div>
+              </address>
             </div>
-            <ul role="list" class="footer__lower--navigation">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Jobs</a></li>
-              <li><a href="#"> Press</a></li>
-              <li><a href="#"> Blog</a></li>
-            </ul>
-            <ul role="list" class="footer__lower--navigation">
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Privacy</a></li>
-            </ul>
+            <nav class="footer__lower--navigation">
+              <ul role="list">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#"> Press</a></li>
+                <li><a href="#"> Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+            </nav>
             <ul role="list" class="footer__lower--links">
               <li>
                 <a href="#" aria-label="facebook"
